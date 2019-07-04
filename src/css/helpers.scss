@@ -1,0 +1,24 @@
+.is-hidden {
+  display: none;
+}
+
+.input-has-error {
+  border: 1px solid red;
+}
+
+.text-has-error {
+  color: red;
+}
+
+.sr-only {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
+
+.no-outline:focus {
+  outline: none;
+}

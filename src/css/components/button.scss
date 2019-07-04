@@ -1,0 +1,34 @@
+.button {
+  background-color: #00ae68;
+  border-radius: 5px;
+  border: 0px;
+  color: white;
+  cursor: pointer;
+  padding: 0.389em 0.833em;
+  transition: background-color 0.2s;
+
+  &:focus {
+    outline: 2px solid yellow;
+  }
+
+  &:hover {
+    background-color: #007144;
+    transition: background-color 0.2s;
+  }
+
+  &--small {
+    padding: 0px;
+  }
+  
+  &--incolor {
+    background-color: inherit;
+  }
+  
+  &--bordered {
+    border: 2px solid;
+  }
+  
+  &--incolor:hover {
+    background-color: inherit;
+  }
+}

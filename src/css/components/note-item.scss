@@ -1,0 +1,74 @@
+@keyframes noteFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Colors folowwing contrast best pratices
+// https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html
+$colors: 'red' #D50000, 'blue' #205D86, 'grey' #2E343B, 'orange' #E65722;
+
+.note-item {
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.833em;
+  padding: 0.833em 0.556em;
+  transition: margin-bottom ease-in 0.3s;
+  word-break: break-all;
+
+  &:hover {
+    box-shadow: 0px 3px 5px -2px rgba(0, 0, 0, 0.62);
+    transition: margin-bottom ease-in 0.3s;
+  }
+  
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  
+  &--with-fade {
+    animation: noteFadeIn ease-in 0.3s;
+    -webkit-animation: noteFadeIn ease-in 0.3s;
+    -moz-animation: noteFadeIn ease-in 0.3s;
+    -o-animation: noteFadeIn ease-in 0.3s;
+    -ms-animation: noteFadeIn ease-in 0.3s;
+  }
+  
+  @each $color in $colors {
+    $key: nth($color, 1);
+    $value: nth($color, 2);
+  
+    &--#{$key} {
+      background-color: $value;
+    }
+  }
+  
+  &__actions {
+    display: flex;
+
+    button {
+      margin-left: 0.556em;
+    }
+  }
+  
+  &__icon {
+    display: block;
+    fill: white;
+  }
+  
+  legend,
+  label {
+    font-weight: bold;
+  }
+
+  // Override rule to be visible in any color
+  .text-has-error {
+    color: white;
+  }
+}

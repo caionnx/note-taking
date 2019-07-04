@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My Notes - App</title>
+    <meta name="author" content="name" />
+    <meta name="description" content="A simple note taking app." />
+    <meta name="keywords" content="notes,todo" />
+  </head>
+  <body>
+    <div id="app" class="box">
+      <h1 class="box__title">My Notes</h1>
+      <div class="card">
+        <h3 class="card__legend" id="empty-list">You dont have any notes.</h3>
+        <span id="sr-status" class="sr-only" role="status"></span>
+        <ul id="list" class="is-hidden"></ul>
+        <hr class="divider" />
+        <form class="note-form note-form--row" tabindex="-1" id="new-note">
+          <div class="note-form__container note-form__container--side-margin">
+            <label for="note" class="sr-only">Add new note:</label>
+            <input
+              id="note"
+              placeholder="Type your new note"
+              class="js-note-value"
+              name="note"
+              type="text"
+            />
+          </div>
+          <div class="note-form__container note-form__container--side-margin">
+            <select
+              id="color"
+              class="js-note-color"
+              title="Select a color for the note. This field is required."
+            >
+              <option value="invalid">Select a color</option>
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="orange">Orange</option>
+              <option value="grey">Grey</option>
+            </select>
+          </div>
+          <div class="note-form__container note-form__container--side-margin">
+            <button class="button" type="submit">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="src/js/index.js"></script>
+  </body>
+</html>

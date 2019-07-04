@@ -1,0 +1,24 @@
+{
+  "name": "note-taking",
+  "version": "1.0.0",
+  "description": null,
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "lodash.clonedeep": "4.5.0",
+    "normalize.css": "8.0.1",
+    "sass": "1.22.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": [
+    "sass",
+    "parcel",
+    "vanillajs"
+  ]
+}

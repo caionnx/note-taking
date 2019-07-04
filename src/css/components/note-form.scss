@@ -1,0 +1,50 @@
+.note-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+  
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.833em;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  
+  &__container--evenly {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  input,
+  select {
+    background-color: white;
+    padding: 0.278em;
+
+    &:focus {
+      outline: 2px solid #00ae68;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .note-form--row {
+    flex-direction: row;
+  }
+
+  .note-form__container--side-margin {
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-right: 0.833em;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
